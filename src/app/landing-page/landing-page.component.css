@@ -1,0 +1,84 @@
+/*specifically for landing page*/
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?education');
+  background-position: center;
+  background-size: cover;
+}
+
+/*specifically for landing page - contains all elements, needed to centerize elements*/
+.centerize-parent {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*specifically for landing page - formatting the block of text on the landing page*/
+.block {
+  position-top: 200px;
+  margin: 0;
+  width: 100vw;
+}
+
+/*specifically for landing page - title*/
+h1 {
+  margin-top: 0px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  font-family: 'Lato', sans-serif;
+}
+
+/*specifically for landing page - large title for large screens*/
+.large-title{
+  margin-top: 0px;
+  font-weight: 900;
+  font-size: 10em;
+  color: rgb(255, 255, 255);
+  font-family: 'Lato', sans-serif;
+}
+
+/*specifically for landing page - div object to centerize components on landing page*/
+.centerize-child {
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/*specifically for landing page - footer*/
+.footer-copyright {
+  height: 5vh;
+  color: white;
+  font-size: 0.9em;
+}
+
+/*specifically for landing page - button*/
+.button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 5px;
+  display: inline-block;
+  border: #000 solid 0px;
+}
+
+/*specifically for landing page - button*/
+.button-white {
+  transition: background-color 0.5s ease;
+  background-color: white;
+  color: black
+}
+
+/*specifically for landing page - button*/
+.button-white:hover {
+  background-color: rgba(255, 255, 255, 0.75);;
+}
+
+/*specifically for landing page - button*/
+.centerize {
+  margin: auto;
+}

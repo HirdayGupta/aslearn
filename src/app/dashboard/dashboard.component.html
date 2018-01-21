@@ -1,0 +1,44 @@
+<!--- navigation bar --->
+<div class="body">
+<nav>
+  <div class="nav-wrapper container">
+    <ul class="right">
+      <li><a href="#" id="logout" (click)="logout()">Log out</a></li>
+    </ul>
+  </div>
+</nav>
+<!--- body div, holds everything --->
+
+  <div class="container">
+    <!--- title to greet user. replace "user_name" with the logged in user's name --->
+    <div class="title">
+      <h1>Hello {{this.user.getName()}}</h1>
+    </div>
+    <!-- table that contains all the lessons -->
+    <table class="lesson-table">
+      <!-- each row is a separate lesson -->
+
+      <tr *ngFor="let lesson of lessons | async; let i = index">
+        <!-- holds title of lesson -->
+        <td>
+          <h6><b>Lesson {{i+1}}:</b></h6>
+          <h4>{{lesson.title}}</h4>
+        </td>
+
+        <td class="right">
+          <!-- some logic to determine if lesson complete and if button should be disabled based on firebase -->
+          <span *ngIf="checkIsLessonComplete(lesson.uid); else incomplete">
+            <p class="complete"><b>Complete</b></p>
+          </span>
+          <ng-template #incomplete>
+            <p class="incomplete"><b>Incomplete</b></p>
+          </ng-template>
+
+          <button type="button" name="button" [routerLink]="['/lesson',lesson.uid]">Enter lesson</button>
+        </td>
+      </tr>
+    </table>
+    <br><br>
+  </div>
+</div>
+

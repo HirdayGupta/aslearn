@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: 'AIzaSyCrhctgThJBJv3zhtVhDlsE11xjVGaL6WY',
+    authDomain: 'aslearn-6757e.firebaseapp.com',
+    databaseURL: 'https://aslearn-6757e.firebaseio.com',
+    projectId: 'aslearn-6757e',
+    storageBucket: 'aslearn-6757e.appspot.com',
+    messagingSenderId: '336109096323'
   }
 };

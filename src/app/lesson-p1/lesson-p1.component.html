@@ -1,0 +1,39 @@
+<div class="body">
+
+<nav>
+  <div class="nav-wrapper container">
+    <ul class="left">
+      <li><a href="#" id="back" routerLink="/dashboard"><i class="material-icons">keyboard_backspace</i></a></li>
+      <li><h5>{{currentLesson.getTitle()}} - Question 1</h5></li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+  <div class="col s12 m4 l4 offset-m4 offset-l4">
+    <div [hidden]="tryAgainDiv">Please try again!!</div>
+    <p>Which letter is the following image?</p>
+    <div class="center-align">
+      <img src="{{img_src}}" alt="" style="height: 150px; width: 150px; padding: 5px;">
+    </div>
+    <form class="choices">
+      <p class="choice">
+        <input class="with-gap" name="answers" type="radio" id="{{choice1}}" (change)="onSelectionChange(2)"/>
+        <label for="{{choice1}}">{{choice1}}</label>
+      </p>
+      <p class="choice">
+        <input class="with-gap" name="answers" type="radio" id="{{choice2}}" (change)="onSelectionChange(1)"/>
+        <label for="{{choice2}}">{{choice2}}</label>
+      </p>
+      <p class="choice">
+        <input class="with-gap" name="answers" type="radio" id="{{choice3}}" (change)="onSelectionChange(3)"/>
+        <label for="{{choice3}}">{{choice3}}</label>
+      </p>
+      <p class="choice">
+        <input class="with-gap" name="answers" type="radio" id="{{choice4}}" (change)="onSelectionChange(0)"/>
+        <label for="{{choice4}}">{{choice4}}</label>
+      </p>
+      <button type="button" name="submit" (click)="checkAnswer()">Submit</button>
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,55 @@
+/*used in dashboard only - navigation bar*/
+nav {
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+/*used in dashboard only - logout button*/
+#back {
+  color: #000000;
+}
+
+html {
+  background-color: #efefef;
+}
+
+li {
+  color: #000000;
+}
+
+/*used in dashboard only - table displaying lessons*/
+.choices {
+  background-color: #ffffff;
+  border: #d3d3d3 solid 1px;
+}
+
+/*used in dashboard only - table cell*/
+.choice {
+  padding: 10px;
+}
+
+/*used in dashboard only - enter lesson buttons*/
+button {
+  width: 100%;
+  background-color: #12bc54;
+  border: #318e55 solid 0px;
+  padding: 5px;
+  /*border-radius: 3px;
+  margin: 10px;*/
+  color: #ffffff;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: #11d64c;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+/*used in dashboard only - enter lesson buttons*/
+button:disabled {
+  background-color: #ffffff;
+  border: #d3d3d3 solid 1px;
+  color: #d3d3d3;
+}

@@ -29,7 +29,7 @@ export class LessonP1Component implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    let p = this.lessonService.changeCurrentLessonTo(this.route.snapshot.params['id']);
+    const p = this.lessonService.changeCurrentLessonTo(this.route.snapshot.params['id']);
     this.tryAgainDiv = true;
     const downloadUrl = 'https://raw.githubusercontent.com/HirdayGupta/MNIST-ASL-DB/master/';
     p.then(() => {
@@ -41,9 +41,9 @@ export class LessonP1Component implements OnInit {
 
 
       this.correctChoice = Math.floor(Math.random() * 4);
-      // while (this.currentLesson.getLetters()[correctChoice] === 'O') {
-      //   correctChoice = Math.floor(Math.random() * 4);
-      // }
+      if (this.currentLesson.getLetters()[this.correctChoice] === 'O') {
+        this.correctChoice += 1;
+      }
       this.img_src = downloadUrl + this.currentLesson.getLetters()[this.correctChoice] + '.png';
       console.log(this.img_src);
     });

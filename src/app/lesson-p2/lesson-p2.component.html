@@ -1,3 +1,17 @@
-<p>
-  lesson-p2 works!
-</p>
+<div class="body">
+  <nav>
+    <div class="nav-wrapper container">
+      <ul class="left">
+        <li><a href="#" id="back"><i class="material-icons">keyboard_backspace</i></a></li>
+        <li><h5>{{currentLesson.getTitle()}}</h5></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col s12 m4 l4 offset-m4 offset-l4">
+      <p>Please sign the following letter: {{correctAnswer}}</p>
+      <video width="400" height="350" id="webcam" controls autoplay></video>
+      <canvas id="canvas" width="400" height="300"></canvas>
+    </div>
+  </div>
+</div>
